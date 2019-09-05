@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <title>Rescue and Relief App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+    /* style for heatmap */
+    #heatmap_container{
+      padding-left: 39px;
+    padding-right: 30px;
+    }
+
+    #heatmap{
+        height: 440px;
+    }
+
+    #map{
+      height: 100%;
+    }
+
+    /* style for heatmap */
+
+    #div5{
+    background: beige;
+    position: relative;
+    top: 15px;
+    left: 71px;
+    width: 1084px;
+    }
+    
+     .topic{
+      background: darkgrey;
+     }
+      .odd{
+        background: snow;
+      }
+      .even{
+        background: wheat;
+      }
+
+ .decor-box {
+    font-size: 12px;
+    font-family: serif;
+    color: black;
+    background: ghostwhite;
+    width: 320px;
+    padding-top: 2px;
+    padding-left: 20px;
+}
+    .parent-box1 {
+    height: 50x;
+    width: 5px;
+    padding-left: 350px;
+    padding-top: 50px;
+}
+
+          html{ height:100%; }
+          body{ min-height:100%; padding:0; margin:0; position:relative; }
+
+
+   footer{
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 30em;
+   }
+  /* THE STYLE DOC FOR THE BREAKING NEWS  */
+
+  .breaking-news-headline {
+  display: block;
+  position: absolute;
+  font-family: arial;
+  font-size: 15px;
+  margin-top: -22px;
+  color: white;
+  margin-left: 150px;
+  font-weight: bold;
+}
+
+.breaking-news-title {
+  background-color: indianred;
+  display: block;
+  height: 50px;
+  width: 180px;
+  font-family: arial;
+  font-size: 15px;
+  position: absolute;
+  top: 0px;
+  margin-top: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 3px;
+  height: 30px;
+  z-index: 3;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    top: 10;
+    left: -12px;
+    border-left: 12px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 30px solid #FFEA00;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 0px;
+    right: -12px;
+    top: 0;
+    border-right: 12px solid transparent;
+    border-left: 0px solid transparent;
+    border-top: 30px solid #FFEA00;
+  }
+}
+
+h4#tt{
+color: white;
+}
+
+#breaking-news-colour {
+  height: 30px;
+  width: 2394px;
+  background-color: black;
+}
+
+#breaking-news-container {
+  top: -370px;
+  height: 30px;
+  width: 89%;
+  padding-left :69px;
+  overflow: hidden;
+  position: absolute;
+  &:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+}
+
+.delay-animated {
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.scroll-animated {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 3s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.delay-animated2 {
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.delay-animated3 {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 5s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 3s;
+}
+
+.fadein {
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    margin-left: 1000px
+  }
+  to {}
+}
+
+@-moz-keyframes fadein {
+  from {
+    margin-left: 1000px
+  }
+  to {}
+}
+
+.slidein {
+  -webkit-animation-name: slidein;
+  -moz-animation-name: slidein;
+  -o-animation-name: slidein;
+  animation-name: slidein;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.marquee {
+  animation: marquee 3s linear infinite;
+  -webkit-animation-duration: 10s;
+  -moz-animation-duration: 10a;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 3s;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 800px
+  }
+  to {
+    margin-top: 0px
+  }
+}
+
+@-moz-keyframes slidein {
+  from {
+    margin-left: 800px
+  }
+  to {
+    margin-top: 0px
+  }
+}
+
+
+.slideup {
+  -webkit-animation-name: slideup;
+  -moz-animation-name: slideup;
+  -o-animation-name: slideup;
+  animation-name: slideup;
+}
+
+@-webkit-keyframes slideup {
+  from {
+    margin-top: 30px
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@-moz-keyframes slideup {
+  from {
+    margin-top: 30px
+  }
+  to {
+    margin-top: 0;
+  }
+}
+  /* THE STYLE DOC FOR THE BREAKING NEWS  */
+/*#map{
+    height: 499px;
+    width: 600px;
+    background: blue;  
+}*/
+div#container-3 {
+    padding-left: 71px;
+}
+
+#map {
+    height: 688px;
+   padding-left: 36px;
+}
+
+div#status-form {
+    height: 533px;
+    width: 316px;
+}
+
+#map, #status-form {
+    float: left;
+    width: 64%;
+    height: 669px;
+    background
+}
+
+ #legend {
+    font-family: Arial, sans-serif;
+    background: ghostwhite;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #000;
+  }
+/*
+CSS STYLES FOR DROP DOWN MENU
+*/
+
+.dropbtn {
+    background-color: gray;
+    color: white;
+    padding: 16px;
+    font-size: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+/*
+CSS STYLES FOR DROP DOWN MENU
+*/
+
+
+</style>
+</head>
+
+
+	<body background="/static/images/background.jpg">
+		<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      		<a class="navbar-brand" href="#">Rescue and Relief App</a>
+    		</div>
+    	<ul class="nav navbar-nav">
+    	  <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+            
+           {% if current_user.is_anonymous %}
+      	  <li><a href="{{ url_for('login') }}">Login</a></li>
+      	   {% else %}
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+           {% endif %}
+            
+          <li><a href="{{ url_for('donations') }}">Donate</a></li>
+          <li><a href="{{ url_for('safety') }}">Safety Drills</a></li>
+      	  <li><a href="{{ url_for('about') }}">About</a></li>
+    	</ul>
+  		</div>
+    </nav>
+      <hr>
+
+      {% block content %}{% endblock %}
+			 
+	</body>
+
+</html>

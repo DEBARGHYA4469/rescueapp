@@ -1,0 +1,11 @@
+User ---> Status 
+
+
+1. Create a update form after the login page at the left side of the map. 
+2. The form response will record the condition (Vic or Vol) and levels of danger, help required etc. 
+3. Submission will ensure the database table is filled.
+4. Schedule a json reviver at the end that will query the database and revamp the json with the victim data and volunteer data. 
+
+
+make status boolean in who of models.py
+

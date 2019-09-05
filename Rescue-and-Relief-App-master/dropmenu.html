@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <input list="screens.screenid-datalist" type="text" id="screens.screenid" onblur="validate()">
+    <datalist id="screens.screenid-datalist">
+        <option value="Login"></option>
+        <option value="ScreenCreator"></option>
+    </datalist>
+    <label id="val-screens.screenid" class="Label_Error" style="visibility: hidden;">*</label>
+</body>
+
+
+<script>
+function validate(){
+console.log(document.getElementById('screens.screenid').value);
+}
+</script>
+
+</html>
+
